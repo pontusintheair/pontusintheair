@@ -1,0 +1,9 @@
+.container{
+  display: grid;
+  grid-template-columns:repeat(12, 1fr);
+  grid-auto-rows: 100px 100px auto 50px;
+  grid-gap: 0px;
+}
+header{
+
+}
