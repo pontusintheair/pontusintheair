@@ -1,7 +1,7 @@
 .container{
   display: grid;
   grid-template-columns:repeat(12, 1fr);
-  grid-template-rows: 200px 50px auto 50px auto 200px;
+  grid-template-rows: auto 50px auto 50px auto 200px;
   grid-gap: 0px;
 
 }
@@ -32,11 +32,8 @@ body{margin: 0;}
   }
 
 nav{
-
-  grid-column: 1/-1;
-  grid-row:2/3;
-/*grid-area: n;*/
-
+grid-column: 1/-1;
+grid-row:2/3;
 justify-self: center;
 background-color: #333;
 overflow: hidden;
@@ -60,7 +57,6 @@ section{
 text-align: center;
 grid-column: 1/-1;
 grid-row:3/4;
-/*grid-area: s;*/
 justify-self: center;
 
 width: 75%;
@@ -86,9 +82,28 @@ center-column{
 }
 footer{
   grid-column: 1/-1;
-  grid-row:6/7;
+  grid-row:7/8;
   /*grid-area: f;*/
   justify-self: center;
   padding: 20px;
 }
-  @media only screen and (max-width: 768px){body}
+
+/* media query för allt som är mindre än surf plattor */
+  @media screen and (max-width: 992px) {
+    left-column {
+      grid-column: 3/10;
+      grid-row: 5/7;
+    }
+    right-column {
+      grid-column: 3/10;
+      grid-row: 7/9;
+    }
+    center-column {
+      grid-column: 3/10;
+      grid-row: 9/11;
+    }
+    footer {
+      grid-column: 1/-1;
+      grid-row: 11/12;
+    }
+  }
